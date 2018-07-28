@@ -16,9 +16,7 @@ export default class extends Component {
           <div>이름: {v.name}</div>
           <div>나이: {v.age}</div>
         </React.Fragment>
-      ))
-
-      }
+      ))}
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua.
