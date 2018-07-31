@@ -3,3 +3,13 @@ node_modules
 .next
 yarn-error.log
 package-lock.json
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
