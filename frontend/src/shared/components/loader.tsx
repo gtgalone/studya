@@ -1,0 +1,1 @@
+export const loader = (color, fontSize) => <i className={`fas fa-spinner fa-pulse text-${color}`} style={{ fontSize, width: fontSize, height: fontSize + 1 }}></i>

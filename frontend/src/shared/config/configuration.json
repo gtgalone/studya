@@ -1,0 +1,96 @@
+{
+  "www": {
+    "env": {
+      "staging": {
+        "API_URL": "https://api.landbook.me/",
+        "FAVICON_URL": "/static/favicon_test.ico",
+        "SITE_IMAGE": "",
+        "SITE_NAME": "",
+        "SITE_TITLE": "",
+        "SITE_DESCRIPTION": ""
+      },
+      "production": {
+        "API_URL": "https://api.landbook.net/",
+        "FAVICON_URL": "/static/favicon.ico",
+        "SITE_IMAGE": "https://www.landbook.net/static/logo_s.png",
+        "SITE_NAME": "랜드북",
+        "SITE_TITLE": "랜드북 - 쉽게 이용하는 토지탐색기",
+        "SITE_DESCRIPTION": "토지 탐색, 사업성 검토 등 내가 원하는 토지를 검색하는 가장 좋은 방법, 랜드북"
+      }
+    },
+    "theme": {
+      "bgPrimary": "#6645CE",
+      "bgSecondary": "#9C82F0",
+      "logoPath": "/static/logo_purple.svg",
+      "logoSmallPath": "/static/logo_s.png",
+      "isShowFilterPercents": true,
+      "isOpenNotice": false,
+      "isAutofocusLogin": true,
+      "isOpenFilter": false,
+      "isDisplayRadius": false,
+      "isDisplayRadiusDevelopment": true,
+      "isMapTypeDistrict": true,
+      "isShowListView": false,
+      "defaultLatitude": 37.545461996638736,
+      "defaultLongitude": 127.04530856683266,
+      "parcelSearchPath": "parcel_searchs?",
+      "preventFilter": "평 단가, 예상 거래가, 소유자, 주용도, 용도지역",
+      "defaultFilterState": {
+        "area": [0, 2000],
+        "estimatedPrice": [0, 10000000000],
+        "unitPrice": [0, 80000000],
+        "age": [0, 60],
+        "ownType": [],
+        "mainUse": [],
+        "landuse": []
+      }
+    }
+  },
+  "safety": {
+    "env": {
+      "staging": {
+        "API_URL": "https://api.landbook.me/",
+        "FAVICON_URL": "/static/favicon_test.ico",
+        "SITE_IMAGE": "",
+        "SITE_NAME": "",
+        "SITE_TITLE": "",
+        "SITE_DESCRIPTION": ""
+      },
+      "production": {
+        "API_URL": "https://api.landbook.net/",
+        "FAVICON_URL": "/static/favicon_safety.ico",
+        "SITE_IMAGE": "https://safety.landbook.net/static/logo_s_safety.png",
+        "SITE_NAME": "랜드북 세이프티",
+        "SITE_TITLE": "랜드북 세이프티 - 붕괴위험 노후건물 탐색기",
+        "SITE_DESCRIPTION": "서울·경기지역 건물노후도(노후년수, 층수, 구조) 및 주변 신축공사(거리, 빈도)에 따라 붕괴 위험이 있는 건물들을 한 눈에 파악할 수 있습니다."
+      }
+    },
+    "theme": {
+      "bgPrimary": "#FF7151",
+      "bgSecondary": "#FF856A",
+      "logoPath": "/static/logo_safety.svg",
+      "logoSmallPath": "/static/logo_s_safety.png",
+      "isShowFilterPercents": false,
+      "isOpenNotice": true,
+      "isAutofocusLogin": false,
+      "isOpenFilter": true,
+      "isDisplayRadius": true,
+      "isDisplayRadiusDevelopment": false,
+      "isMapTypeDistrict": false,
+      "isShowListView": true,
+      "defaultLatitude": 37.53114116,
+      "defaultLongitude": 126.98047238,
+      "parcelSearchPath": "parcel_search_safeties?",
+      "preventFilter": "건물 연면적, 건물 층 수, 건물 구조, 도시정비사업 구역",
+      "defaultFilterState": {
+        "area": [0, 500],
+        "gfArea": [0, 2000],
+        "age": [40, 60],
+        "floor": [2, 5],
+        "structure": ["목재", "블록", "벽돌", "기타조적", "PEB", "경량철골", "콘크리트", "기타"],
+        "nearDev": [0, 4],
+        "maintenanceArea": "0"
+      }
+    }
+  }
+}

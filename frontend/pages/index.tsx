@@ -1,10 +1,18 @@
-import React from 'react'
-
-let lastScrollY = 0
-let ticking = false
-
+import * as React from 'react'
 
 class Index extends React.Component {
+  private nav: any
+  private lastScrollY: number
+  private ticking: boolean
+
+  public constructor(props) {
+    super(props)
+    this.nav = React.createRef()
+
+    this.lastScrollY = 0
+    this.ticking = false
+  }
+
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll)
   }
@@ -13,17 +21,16 @@ class Index extends React.Component {
     window.removeEventListener('scroll', this.handleScroll)
   }
 
-  nav = React.createRef()
 
   handleScroll = () => {
-    lastScrollY = window.scrollY
+    this.lastScrollY = window.scrollY
 
-    if (!ticking) {
+    if (!this.ticking) {
       window.requestAnimationFrame(() => {
-        this.nav.current.style.height = `${460 - lastScrollY}px`
-        ticking = false
+        this.nav.current.style.height = `${460 - this.lastScrollY}px`
+        this.ticking = false
       })
-      ticking = true
+      this.ticking = true
     }
   };
   render() {
@@ -42,7 +49,7 @@ class Index extends React.Component {
         </div>
         <div className="d-flex flex-wrap justify-content-center p-3" style={{ minWidth: '50%'}}>
           <div className="card m-1" style={{ width: '18rem' }}>
-            <img class="card-img-top" src="/static/card-image.jpg" height="180" alt="Card image cap" />
+            <img className="card-img-top" src="/static/card-image.jpg" height="180" alt="Card image cap" />
             <div className="card-body">
               <h5 className="card-title">영어 스터디 모집</h5>
               <p className="card-text">일상생활에 필요한 영어를</p>
@@ -52,7 +59,7 @@ class Index extends React.Component {
             </div>
           </div>
           <div className="card m-1" style={{ width: '18rem' }}>
-            <img class="card-img-top" src="/static/card-image.jpg" height="180" alt="Card image cap" />
+            <img className="card-img-top" src="/static/card-image.jpg" height="180" alt="Card image cap" />
             <div className="card-body">
               <h5 className="card-title">회화 스터디 같이하실분</h5>
               <p className="card-text">일상생활에 필요한 영어를</p>
@@ -62,7 +69,7 @@ class Index extends React.Component {
             </div>
           </div>
           <div className="card m-1" style={{ width: '18rem' }}>
-            <img class="card-img-top" src="/static/card-image.jpg" height="180" alt="Card image cap" />
+            <img className="card-img-top" src="/static/card-image.jpg" height="180" alt="Card image cap" />
             <div className="card-body">
               <h5 className="card-title">개발 스터디 합시다</h5>
               <p className="card-text">일상생활에 필요한 영어를</p>
@@ -72,7 +79,7 @@ class Index extends React.Component {
             </div>
           </div>
           <div className="card m-1" style={{ width: '18rem' }}>
-            <img class="card-img-top" src="/static/card-image.jpg" height="180" alt="Card image cap" />
+            <img className="card-img-top" src="/static/card-image.jpg" height="180" alt="Card image cap" />
             <div className="card-body">
               <h5 className="card-title">토플 스터디 (120점 목표)</h5>
               <p className="card-text">일상생활에 필요한 영어를</p>
@@ -82,7 +89,7 @@ class Index extends React.Component {
             </div>
           </div>
           <div className="card m-1" style={{ width: '18rem' }}>
-            <img class="card-img-top" src="/static/card-image.jpg" height="180" alt="Card image cap" />
+            <img className="card-img-top" src="/static/card-image.jpg" height="180" alt="Card image cap" />
             <div className="card-body">
               <h5 className="card-title">개발 스터디 해요</h5>
               <p className="card-text">일상생활에 필요한 영어를</p>
@@ -92,7 +99,7 @@ class Index extends React.Component {
             </div>
           </div>
           <div className="card m-1" style={{ width: '18rem' }}>
-            <img class="card-img-top" src="/static/card-image.jpg" height="180" alt="Card image cap" />
+            <img className="card-img-top" src="/static/card-image.jpg" height="180" alt="Card image cap" />
             <div className="card-body">
               <h5 className="card-title">토익 스터디 할 사람</h5>
               <p className="card-text">일상생활에 필요한 영어를</p>
@@ -102,7 +109,7 @@ class Index extends React.Component {
             </div>
           </div>
           <div className="card m-1" style={{ width: '18rem' }}>
-            <img class="card-img-top" src="/static/card-image.jpg" height="180" alt="Card image cap" />
+            <img className="card-img-top" src="/static/card-image.jpg" height="180" alt="Card image cap" />
             <div className="card-body">
               <h5 className="card-title">수학 스터디 모집해요</h5>
               <p className="card-text">일상생활에 필요한 영어를</p>
@@ -112,7 +119,7 @@ class Index extends React.Component {
             </div>
           </div>
           <div className="card m-1" style={{ width: '18rem' }}>
-            <img class="card-img-top" src="/static/card-image.jpg" height="180" alt="Card image cap" />
+            <img className="card-img-top" src="/static/card-image.jpg" height="180" alt="Card image cap" />
             <div className="card-body">
               <h5 className="card-title">개발 스터디 같이 해보실 분</h5>
               <p className="card-text">일상생활에 필요한 영어를</p>
@@ -122,7 +129,7 @@ class Index extends React.Component {
             </div>
           </div>
           <div className="card m-1" style={{ width: '18rem' }}>
-            <img class="card-img-top" src="/static/card-image.jpg" height="180" alt="Card image cap" />
+            <img className="card-img-top" src="/static/card-image.jpg" height="180" alt="Card image cap" />
             <div className="card-body">
               <h5 className="card-title">회화 스터디 할까요?</h5>
               <p className="card-text">일상생활에 필요한 영어를</p>
@@ -132,7 +139,7 @@ class Index extends React.Component {
             </div>
           </div>
           <div className="card m-1" style={{ width: '18rem' }}>
-            <img class="card-img-top" src="/static/card-image.jpg" height="180" alt="Card image cap" />
+            <img className="card-img-top" src="/static/card-image.jpg" height="180" alt="Card image cap" />
             <div className="card-body">
               <h5 className="card-title">개발 스터디</h5>
               <p className="card-text">일상생활에 필요한 영어를</p>
@@ -144,7 +151,7 @@ class Index extends React.Component {
         </div>
         <style jsx>{`{
           .main-image {
-            height: 460px;
+            height: 400px;
             min-height: 200px;
             background-image: url(/static/main-image.jpg);
             background-size: cover;

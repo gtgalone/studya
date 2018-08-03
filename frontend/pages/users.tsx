@@ -1,7 +1,12 @@
 import React, { Component } from 'react'
 import 'isomorphic-unfetch'
 
-export default class extends Component {
+interface Props {
+  userId: string
+  users: any[]
+}
+
+export default class extends Component<Props> {
   static async getInitialProps ({ query: { id } }) {
     const users = await fetch('http://localhost:5000/api/users').then((res) => res.json())
     console.log(users)
