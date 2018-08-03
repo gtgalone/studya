@@ -4,8 +4,8 @@ import getConfig from 'next/config'
 import 'isomorphic-unfetch'
 
 export default class extends Document {
-  static async getInitialProps(...args) {
-    const d = Document
+  static async getInitialProps(...args: any[]) {
+    const d: any = Document
     const documentProps = await d.getInitialProps(...args)
     const { renderPage } = args[0]
     const page = renderPage()
@@ -13,7 +13,6 @@ export default class extends Document {
   }
 
   render() {
-    const { user } = this.props
     return (
       <html lang="ko">
         <Head>
@@ -63,7 +62,6 @@ export default class extends Document {
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', '${getConfig().publicRuntimeConfig.GA_TRACKING_ID}');
-              ${user && `gtag('set', {'user_id': '${user.email}'});`}
               `
             }}
           />
